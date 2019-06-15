@@ -34,22 +34,12 @@ And Follow our Android Studio emulator guide to set up Android tools and create 
 https://docs.expo.io/versions/latest/workflow/android-studio-emulator/
 ```
 
-- docker-compose up 　で docker を立ち上げる。
+- yarn
 
 ```
-$ docker-compose up -d
-```
-
-- docker /bin/sh にログインする。
-
-```
-$ docker exec -it chat-app_vue_app_1 /bin/sh
-```
-
-- yarn を立ち上げる。
-
-```
-/chat-app # yarn start
+$ yarn
+$ yarn start
+open http://localhost:19002
 ```
 
 ## 要件定義
