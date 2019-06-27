@@ -11,7 +11,7 @@ export default {
 </script>
 
 <style>
-.container { 
+.container {
   flex: 1;
   margin-bottom: 30;
 }
