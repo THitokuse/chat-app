@@ -1,16 +1,17 @@
 <template>
   <view class="button-wrapper">
-    <!-- <view v-if="disabled" class="disabled">
-      <text>Disabled</text>
-    </view> -->
+    <view v-if="disabled" class="disabled-button">
+      <text class="disabled-text">
+        <slot/>
+      </text>
+    </view>
     <touchable-opacity
-      :class="[
-        type ? type : '',
-        disabled ? 'disable' : '',
-      ]"
-      @click="onPress"
+      v-else
+      :class="['styled-button', type]"
     >
-      <text>Button</text>
+      <text :class="['button-text', type]">
+        <slot/>
+      </text>
     </touchable-opacity>
   </view>
 </template>
@@ -23,10 +24,6 @@ export default {
       type: String,
       default: ""
     },
-    onPress: {
-      type: Function,
-      default: function() {}
-    },
     disabled: {
       type: Boolean,
       default: false
@@ -36,13 +33,38 @@ export default {
 </script>
 
 <style>
-.button-wrapper {
+.styled-button {
   line-height: 1.4;
-  padding: 5px 15px;
+  padding: 10px;
+  padding-right: 30px;
+  padding-left: 30px;
   margin-top: 8px;
   border-radius: 4px;
+  background-color: #20aee5;
 }
-.disable {
+.button-text {
+  color: #ffffff;
+}
+.flat {
+  background-color: #ffffff;
+  color: #20aee5;
+}
+.danger {
+  background-color: #fc6356;
+  color: #ffffff;
+}
+
+.disabled-button {
+  line-height: 1.4;
+  padding: 10px;
+  padding-right: 30px;
+  padding-left: 30px;
+  margin-top: 8px;
+  border-radius: 4px;
+  background-color: #c7c7c7;
   opacity: 0.3;
+}
+.disabled-text {
+  color: #777777;
 }
 </style>
