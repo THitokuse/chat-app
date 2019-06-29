@@ -1,6 +1,5 @@
 <template>
-  <view class="container">
-    <text>Header</text>
+  <view class="header">
     <component :is="headerComponent"></component>
   </view>
 </template>
@@ -28,5 +27,8 @@ export default {
 </script>
 
 <style>
-
+.header {
+  background-color: #20AEE5;
+  padding: 10px;
+}
 </style>
