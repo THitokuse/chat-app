@@ -1,12 +1,18 @@
 <template>
   <view class="container">
+    <Header :headerComponent="'ColumnHeader'"></Header>
     <text>Column Screen</text>
   </view>
 </template>
 
 <script>
+import Header from '../../globals/Header'
+
 export default {
-  name: "ColumnScreen"
+  name: "ColumnScreen",
+  components: {
+    Header
+  }
 };
 </script>
 

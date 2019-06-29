@@ -1,12 +1,18 @@
 <template>
   <view class="container">
+    <Header :headerComponent="'TopHeader'"></Header>
     <text>Top Face Screen</text>
   </view>
 </template>
 
 <script>
+import Header from '../../globals/Header'
+
 export default {
-  name: "TopFaceScreen"
+  name: "TopFaceScreen",
+  components: {
+    Header
+  }
 };
 </script>
 

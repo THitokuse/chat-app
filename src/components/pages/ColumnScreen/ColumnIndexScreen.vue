@@ -1,12 +1,18 @@
 <template>
   <view class="container">
+    <Header :headerComponent="'ColumnHeader'"></Header>
     <text>Column Index Screen</text>
   </view>
 </template>
 
 <script>
+import Header from '../../globals/Header'
+
 export default {
-  name: "ColumnIndexScreen"
+  name: "ColumnIndexScreen",
+  components: {
+    Header
+  }
 };
 </script>
 
