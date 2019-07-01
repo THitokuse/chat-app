@@ -1,17 +1,31 @@
 <template>
-  <view class="container">
-    <text class="text-color-primary">My Vue Native App</text>
-  </view>
+  <safe-area-view class="container" :forceInset="forceInset">
+    <tab-nav />
+  </safe-area-view>
 </template>
+
+<script>
+import Vue from "vue-native-core";
+import { SafeAreaView } from "vue-native-router";
+import { VueNativeBase } from "native-base";
+import { tabNav } from "./src/navigation/navigation.js";
+
+Vue.use(VueNativeBase);
+
+export default {
+  components: { SafeAreaView, tabNav },
+  data() {
+    return {
+      forceInset: { top: "always", bottom: "never" }
+    };
+  }
+};
+</script>
 
 <style>
 .container {
   background-color: white;
-  align-items: center;
-  justify-content: center;
   flex: 1;
-}
-.text-color-primary {
-  color: blue;
+  justify-content: space-between;
 }
 </style>
