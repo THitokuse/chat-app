@@ -1,8 +1,16 @@
 <template>
   <view>
-    <view :class="['text-field-wrapper', error ? 'error-text-field' : '']">
+    <view :class="['text-area-wrapper', error ? 'error-text-area' : '']">
       <text :class="['label', error ? 'error-label' : '']">{{ label }}</text>
-      <text-input v-model="text" class="text-field" autoCapitalize="none" :editable="editable"></text-input>
+      <text-input
+        multiline
+        v-model="text"
+        class="text-area"
+        autoCapitalize="none"
+        :editable="editable"
+        :style="{ height: height }"
+      >
+      </text-input>
     </view>
     <text v-if="error" class="error-text">{{ error }}</text>
   </view>
@@ -10,7 +18,7 @@
 
 <script>
 export default {
-  name: "TextField",
+  name: "TextArea",
   props: {
     value: {
       type: String
@@ -29,7 +37,16 @@ export default {
     },
     update: {
       type: Function
+    },
+    rowSpan: {
+      type: Number,
+      default: 5
     }
+  },
+  data: function() {
+    return {
+      height: this.rowSpan * 20
+    };
   },
   computed: {
     text: {
@@ -45,11 +62,11 @@ export default {
 </script>
 
 <style scoped>
-.text-field-wrapper {
+.text-area-wrapper {
   border-bottom-color: #c7c7c7;
   border-bottom-width: 1px;
 }
-.error-text-field {
+.error-text-area {
   border-bottom-color: #fc6356;
 }
 .label {
@@ -60,8 +77,7 @@ export default {
 .error-label {
   color: #fc6356;
 }
-.text-field {
-  height: 30px;
+.text-area {
   font-size: 16px;
 }
 .error-text {
