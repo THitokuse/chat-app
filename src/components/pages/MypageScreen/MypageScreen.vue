@@ -1,18 +1,17 @@
 <template>
-  <view class="container">
-        <text>Mypage Screen</text>
-    </view>
+  <default-template>
+    <text>Mypage Screen</text>
+  </default-template>
 </template>
 
 <script>
+import { DefaultTemplate } from "../../templates";
+
 export default {
-  name: "MypageScreen"
+  name: "MypageScreen",
+  components: { DefaultTemplate }
 };
 </script>
 
 <style>
-.container {
-  flex: 1;
-  margin-bottom: 30;
-}
 </style>
