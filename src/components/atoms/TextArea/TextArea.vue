@@ -43,7 +43,7 @@ export default {
       default: 5
     }
   },
-  data: function() {
+  data() {
     return {
       height: this.rowSpan * 20
     };
