@@ -1,18 +1,17 @@
 <template>
-  <view class="container">
+  <default-template>
     <text>Setting Screen</text>
-  </view>
+  </default-template>
 </template>
 
 <script>
+import { DefaultTemplate } from "../../templates";
+
 export default {
-  name: "SettingScreen"
+  name: "SettingScreen",
+  components: { DefaultTemplate }
 };
 </script>
 
 <style>
-.container { 
-  flex: 1;
-  margin-bottom: 30;
-}
 </style>

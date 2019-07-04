@@ -1,18 +1,17 @@
 <template>
-  <view class="container">
+  <default-template>
     <text>Top Personality Screen</text>
-  </view>
+  </default-template>
 </template>
 
 <script>
+import { DefaultTemplate } from "../../templates";
+
 export default {
-  name: "TopPersonalityScreen"
+  name: "TopPersonalityScreen",
+  components: { DefaultTemplate }
 };
 </script>
 
 <style>
-.container {
-  flex: 1;
-  margin-bottom: 30;
-}
 </style>
