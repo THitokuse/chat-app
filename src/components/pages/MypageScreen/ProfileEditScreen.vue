@@ -1,18 +1,17 @@
 <template>
-  <view class="container">
+  <default-template>
     <text>Profile Edit Screen</text>
-  </view>
+  </default-template>
 </template>
 
 <script>
+import { DefaultTemplate } from "../../templates";
+
 export default {
-  name: "ProfileEditScreen"
+  name: "ProfileEditScreen",
+  components: { DefaultTemplate }
 };
 </script>
 
 <style>
-.container { 
-  flex: 1;
-  margin-bottom: 30;
-}
 </style>

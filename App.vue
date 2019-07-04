@@ -7,10 +7,7 @@
 <script>
 import Vue from "vue-native-core";
 import { SafeAreaView } from "vue-native-router";
-import { VueNativeBase } from "native-base";
 import { tabNav } from "./src/navigation/navigation.js";
-
-Vue.use(VueNativeBase);
 
 export default {
   components: { SafeAreaView, tabNav },
