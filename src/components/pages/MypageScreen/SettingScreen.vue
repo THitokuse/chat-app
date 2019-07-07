@@ -1,24 +1,23 @@
 <template>
   <view class="container">
     <Header :headerComponent="'MypageHeader'"></Header>
+  <default-template>
     <text>Setting Screen</text>
-  </view>
+  </default-template>
 </template>
 
 <script>
-import Header from '../../globals/Header'
+import Header from '../../globals/Header';
+import { DefaultTemplate } from "../../templates";
 
 export default {
   name: "SettingScreen",
   components: {
-    Header
+    Header,
+    DefaultTemplate
   }
 };
 </script>
 
 <style>
-.container { 
-  flex: 1;
-  margin-bottom: 30;
-}
 </style>
