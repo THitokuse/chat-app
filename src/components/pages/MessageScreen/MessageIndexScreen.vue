@@ -1,9 +1,10 @@
 <template>
   <view class="container">
     <Header :headerComponent="'MessageHeader'"></Header>
-  <default-template>
-    <text>Message Index Screen</text>
-  </default-template>
+    <default-template>
+      <text>Message Index Screen</text>
+    </default-template>
+  </view>
 </template>
 
 <script>

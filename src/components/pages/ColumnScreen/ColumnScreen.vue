@@ -1,9 +1,10 @@
 <template>
   <view class="container">
     <Header :headerComponent="'ColumnHeader'"></Header>
-  <default-template>
-    <text>Column Screen</text>
-  </default-template>
+    <default-template>
+      <text>Column Screen</text>
+    </default-template>
+  </view>
 </template>
 
 <script>
