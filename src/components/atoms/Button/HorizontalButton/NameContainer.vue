@@ -1,12 +1,13 @@
 <template>
   <view class="name-container">
-    <text class="button-text">プロフィール</text>
+    <text class="button-text">{{ name }}</text>
   </view>
 </template>
 
 <script>
 export default {
-  name: "NameContainer"
+  name: "NameContainer",
+  props: ["name"]
 }
 </script>
 

@@ -2,7 +2,37 @@
   <view>
     <view class="button-wrapper">
       <IconContainer></IconContainer>
-      <NameContainer></NameContainer>
+      <NameContainer :name="'プロフィール'"></NameContainer>
+      <RightContainer></RightContainer>
+    </view>
+    <view class="separator"/>
+    <view class="button-wrapper">
+      <IconContainer></IconContainer>
+      <NameContainer :name="'アカウント'"></NameContainer>
+      <RightContainer></RightContainer>
+    </view>
+    <view class="separator"/>
+    <view class="button-wrapper">
+      <IconContainer></IconContainer>
+      <NameContainer :name="'プライバシー管理'"></NameContainer>
+      <RightContainer></RightContainer>
+    </view>
+    <view class="separator"/>
+    <view class="button-wrapper">
+      <IconContainer></IconContainer>
+      <NameContainer :name="'アカウント引継'"></NameContainer>
+      <RightContainer></RightContainer>
+    </view>
+    <view class="separator"/>
+    <view class="button-wrapper">
+      <IconContainer></IconContainer>
+      <NameContainer :name="'スタンプ'"></NameContainer>
+      <RightContainer></RightContainer>
+    </view>
+    <view class="separator"/>
+    <view class="button-wrapper">
+      <IconContainer></IconContainer>
+      <NameContainer :name="'着せ替え'"></NameContainer>
       <RightContainer></RightContainer>
     </view>
     <view class="separator"/>
