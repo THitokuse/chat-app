@@ -1,12 +1,13 @@
 <template>
   <text class="description">
-    記事テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト
+    {{ content }}
   </text>  
 </template>
 
 <script>
 export default {
-  name: "DescriptionArea"
+  name: "DescriptionArea",
+  props: ["content"]
 }
 </script>
 
