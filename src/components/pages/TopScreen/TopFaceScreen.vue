@@ -1,17 +1,20 @@
 <template>
   <view class="container">
     <Header :headerComponent="'TopHeader'"></Header>
+  <default-template>
     <text>Top Face Screen</text>
-  </view>
+  </default-template>
 </template>
 
 <script>
-import Header from '../../globals/Header'
+import Header from '../../globals/Header';
+import { DefaultTemplate } from "../../templates";
 
 export default {
   name: "TopFaceScreen",
   components: {
-    Header
+    Header,
+    DefaultTemplate
   }
 };
 </script>

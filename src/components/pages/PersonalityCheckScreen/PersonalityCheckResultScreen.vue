@@ -1,17 +1,20 @@
 <template>
   <view class="container">
     <Header :headerComponent="'PersonalityCheckHeader'"></Header>
+  <default-template>
     <text>Personality Check Result Screen</text>
-  </view>
+  </default-template>
 </template>
 
 <script>
-import Header from '../../globals/Header'
+import Header from '../../globals/Header';
+import { DefaultTemplate } from "../../templates";
 
 export default {
   name: "PersonalityCheckResultScreen",
   components: {
-    Header
+    Header,
+    DefaultTemplate
   }
 };
 </script>
