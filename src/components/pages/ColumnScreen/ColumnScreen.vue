@@ -25,8 +25,4 @@ export default {
 };
 </script>
 
-<style>
-.column-image {
-  padding-horizontal: 50;
-}
-</style>
+<style></style>
