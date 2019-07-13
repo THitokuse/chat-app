@@ -1,7 +1,7 @@
 <template>
   <text class="description">
     {{ content }}
-  </text>  
+  </text>
 </template>
 
 <script>
