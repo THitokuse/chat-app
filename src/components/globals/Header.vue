@@ -5,11 +5,11 @@
 </template>
 
 <script>
-import TopHeader from '../molecles/TopHeader'
-import MypageHeader from '../molecles/MypageHeader'
-import MessageHeader from '../molecles/MessageHeader'
-import PersonalityCheckHeader from '../molecles/PersonalityCheckHeader'
-import ColumnHeader from '../molecles/ColumnHeader'
+import TopHeader from '../molecles/Headers/TopHeader'
+import MypageHeader from '../molecles/Headers/MypageHeader'
+import MessageHeader from '../molecles/Headers/MessageHeader'
+import PersonalityCheckHeader from '../molecles/Headers/PersonalityCheckHeader'
+import ColumnHeader from '../molecles/Headers/ColumnHeader'
 
 export default {
   name: "Header",
@@ -29,6 +29,6 @@ export default {
 <style>
 .header {
   background-color: #20AEE5;
-  padding: 10px;
+  padding: 20;
 }
 </style>
