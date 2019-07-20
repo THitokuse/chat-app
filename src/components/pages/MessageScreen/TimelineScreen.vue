@@ -1,15 +1,22 @@
 <template>
-  <default-template>
-    <text>Timeline Screen</text>
-  </default-template>
+  <view class="container">
+    <Header :headerComponent="'MessageHeader'"></Header>
+    <default-template>
+      <text>Timeline Screen</text>
+    </default-template>
+  </view>
 </template>
 
 <script>
+import Header from '../../globals/Header';
 import { DefaultTemplate } from "../../templates";
 
 export default {
   name: "TimelineScreen",
-  components: { DefaultTemplate }
+  components: {
+    Header,
+    DefaultTemplate
+  }
 };
 </script>
 

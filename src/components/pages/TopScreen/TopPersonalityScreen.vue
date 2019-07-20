@@ -1,15 +1,22 @@
 <template>
-  <default-template>
-    <text>Top Personality Screen</text>
-  </default-template>
+  <view class="container">
+    <Header :headerComponent="'TopHeader'"></Header>
+    <default-template>
+      <text>Top Personality Screen</text>
+    </default-template>
+  </view>
 </template>
 
 <script>
+import Header from '../../globals/Header';
 import { DefaultTemplate } from "../../templates";
 
 export default {
   name: "TopPersonalityScreen",
-  components: { DefaultTemplate }
+  components: {
+    Header,
+    DefaultTemplate
+  }
 };
 </script>
 
