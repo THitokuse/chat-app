@@ -1,5 +1,5 @@
 <template>
-  <ionicons :name="name" size=40 :color="color" />
+  <ionicons :name="name" :size="40" :color="color" />
 </template>
 
 <script>
