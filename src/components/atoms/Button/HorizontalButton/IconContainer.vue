@@ -1,7 +1,5 @@
 <template>
-  <view class="icon-container">
-    <ionicons name="md-checkmark-circle" size=40 color="green" />
-  </view>
+  <ionicons :name="name" size=40 :color="color" />
 </template>
 
 <script>
@@ -9,6 +7,7 @@ import { Ionicons } from "@expo/vector-icons";
 
 export default {
   name: "IconContainer",
+  props: ["name", "color"],
   components: {
     Ionicons
   }
