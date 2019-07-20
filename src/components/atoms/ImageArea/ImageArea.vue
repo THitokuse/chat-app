@@ -2,7 +2,7 @@
   <view class="column-image">
     <image
       :style="{ width: width, height: height}"
-      resizeMode='contain'
+      resizeMode='cover'
       :source="{uri:uri}"
     />
   </view>
@@ -16,7 +16,4 @@ export default {
 </script>
 
 <style>
-.column-image {
-  padding-horizontal: 50;
-}
 </style>
