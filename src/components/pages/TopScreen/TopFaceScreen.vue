@@ -15,7 +15,6 @@ export default {
   name: "TopFaceScreen",
   components: {
     Header,
-    HorizontalButton,
     DefaultTemplate
   }
 };
