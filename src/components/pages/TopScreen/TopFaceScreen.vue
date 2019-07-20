@@ -1,9 +1,10 @@
 <template>
   <view class="container">
     <Header :headerComponent="'TopHeader'"></Header>
-  <default-template>
-    <text>Top Face Screen</text>
-  </default-template>
+    <default-template>
+      <text>Top Face Screen</text>
+    </default-template>
+  </view>
 </template>
 
 <script>
@@ -14,6 +15,7 @@ export default {
   name: "TopFaceScreen",
   components: {
     Header,
+    HorizontalButton,
     DefaultTemplate
   }
 };

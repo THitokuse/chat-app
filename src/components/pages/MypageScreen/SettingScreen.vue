@@ -1,9 +1,10 @@
 <template>
   <view class="container">
     <Header :headerComponent="'MypageHeader'"></Header>
-  <default-template>
-    <text>Setting Screen</text>
-  </default-template>
+    <default-template>
+      <text>Setting Screen</text>
+    </default-template>
+  </view>
 </template>
 
 <script>

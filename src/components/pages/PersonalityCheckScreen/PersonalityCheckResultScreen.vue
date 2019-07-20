@@ -1,9 +1,10 @@
 <template>
   <view class="container">
     <Header :headerComponent="'PersonalityCheckHeader'"></Header>
-  <default-template>
-    <text>Personality Check Result Screen</text>
-  </default-template>
+    <default-template>
+      <text>Personality Check Result Screen</text>
+    </default-template>
+  </view>
 </template>
 
 <script>
