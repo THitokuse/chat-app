@@ -1,37 +1,37 @@
 <template>
   <view>
     <view class="button-wrapper">
-      <IconContainer></IconContainer>
+      <IconContainer :name="'md-checkmark-circle'"></IconContainer>
       <NameContainer :name="'プロフィール'"></NameContainer>
       <RightContainer></RightContainer>
     </view>
     <view class="separator"/>
     <view class="button-wrapper">
-      <IconContainer></IconContainer>
+      <IconContainer :name="'md-checkmark-circle'"></IconContainer>
       <NameContainer :name="'アカウント'"></NameContainer>
       <RightContainer></RightContainer>
     </view>
     <view class="separator"/>
     <view class="button-wrapper">
-      <IconContainer></IconContainer>
+      <IconContainer :name="'md-checkmark-circle'"></IconContainer>
       <NameContainer :name="'プライバシー管理'"></NameContainer>
       <RightContainer></RightContainer>
     </view>
     <view class="separator"/>
     <view class="button-wrapper">
-      <IconContainer></IconContainer>
+      <IconContainer :name="'md-checkmark-circle'"></IconContainer>
       <NameContainer :name="'アカウント引継'"></NameContainer>
       <RightContainer></RightContainer>
     </view>
     <view class="separator"/>
     <view class="button-wrapper">
-      <IconContainer></IconContainer>
+      <IconContainer :name="'md-checkmark-circle'"></IconContainer>
       <NameContainer :name="'スタンプ'"></NameContainer>
       <RightContainer></RightContainer>
     </view>
     <view class="separator"/>
     <view class="button-wrapper">
-      <IconContainer></IconContainer>
+      <IconContainer :name="'md-checkmark-circle'"></IconContainer>
       <NameContainer :name="'着せ替え'"></NameContainer>
       <RightContainer></RightContainer>
     </view>
