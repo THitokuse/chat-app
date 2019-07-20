@@ -1,7 +1,5 @@
 <template>
-  <view class="name-container">
-    <text class="button-text">{{ name }}</text>
-  </view>
+  <text class="button-text">{{ name }}</text>
 </template>
 
 <script>
@@ -11,10 +9,4 @@ export default {
 }
 </script>
 
-<style>
-.name-container {
-  flex: 2;
-  padding-top: 15;
-
-}
-</style>
+<style></style>
