@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import HorizontalButton from "../../../molecles/HorizontalButton/MypageSetting/HorizontalButton";
+import { HorizontalButton } from "../../../molecles";
 
 export default {
   name: "HorizontalButtonList",

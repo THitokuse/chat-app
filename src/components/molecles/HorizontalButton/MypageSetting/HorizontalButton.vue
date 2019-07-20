@@ -16,8 +16,7 @@
 </template>
 
 <script>
-import IconContainer from '../../../atoms/Button/HorizontalButton/IconContainer';
-import NameContainer from '../../../atoms/Button/HorizontalButton/NameContainer';
+import { IconContainer, NameContainer } from "../../../atoms";
 
 export default {
   name: "HorizontalButton",

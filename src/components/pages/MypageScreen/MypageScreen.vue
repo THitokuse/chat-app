@@ -4,20 +4,20 @@
     <default-template>
       <text>Mypage Screen</text>
     </default-template>
-    <HorizontalButton></HorizontalButton>
+    <HorizontalButtonList></HorizontalButtonList>
   </view>
 </template>
 
 <script>
 import Header from '../../globals/Header';
-import HorizontalButton from '../../organisms/HorizontalButtonList/MypageSetting/HorizontalButtonList';
+import { HorizontalButtonList } from '../../organisms';
 import { DefaultTemplate } from "../../templates";
 
 export default {
   name: "MypageScreen",
   components: {
     Header,
-    HorizontalButton,
+    HorizontalButtonList,
     DefaultTemplate
   }
 };
