@@ -1,7 +1,7 @@
 <template>
   <view class="column-image">
     <image
-      :style="{ width: 300, height: 250}"
+      :style="{ width: width, height: height}"
       resizeMode='contain'
       :source="{uri:uri}"
     />
@@ -11,7 +11,7 @@
 <script>
 export default {
   name: "ImageArea",
-  props: ["uri"]
+  props: ["uri", "width", "height"]
 }
 </script>
 

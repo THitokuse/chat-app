@@ -3,6 +3,7 @@
     <Header :headerComponent="'TopHeader'"></Header>
     <default-template>
       <text>Top Face Screen</text>
+      <personality-card></personality-card>
     </default-template>
   </view>
 </template>
@@ -10,14 +11,14 @@
 <script>
 import Header from '../../globals/Header';
 import { DefaultTemplate } from "../../templates";
-import CardComponent from "./CardComponent";
+import PersonalityCard from "../../molecles/PersonalityCard/PersonalityCard";
 
 export default {
   name: "TopFaceScreen",
   components: {
     Header,
     DefaultTemplate,
-    CardComponent
+    PersonalityCard
   }
 };
 </script>

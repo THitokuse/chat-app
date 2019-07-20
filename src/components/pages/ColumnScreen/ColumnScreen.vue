@@ -4,7 +4,7 @@
   <default-template>
     <text>Column Screen</text>
   </default-template>
-  <ImageArea :uri="'https://hitokuse.com/blog/wp-content/uploads/2019/06/DSC06289-1024x683.jpg'"></ImageArea>
+  <ImageArea :width="300" :height="250" uri="https://hitokuse.com/blog/wp-content/uploads/2019/06/DSC06289-1024x683.jpg"></ImageArea>
   <DescriptionArea :content="'記事テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト'"></DescriptionArea>
 </template>
 
