@@ -1,17 +1,19 @@
 <template>
   <view class="container">
     <Header :headerComponent="'ColumnHeader'"></Header>
-  <default-template>
-    <text>Column Screen</text>
-  </default-template>
-  <ImageArea :width="300" :height="250" uri="https://hitokuse.com/blog/wp-content/uploads/2019/06/DSC06289-1024x683.jpg"></ImageArea>
-  <DescriptionArea :content="'記事テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト'"></DescriptionArea>
+    <default-template>
+      <text>Column Screen</text>
+    </default-template>
+    <view class="column-image">
+      <ImageArea :width="300" :height="250" uri="https://hitokuse.com/blog/wp-content/uploads/2019/06/DSC06289-1024x683.jpg"></ImageArea>
+    </view>
+    <DescriptionArea :content="'記事テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト'"></DescriptionArea>
+  </view>
 </template>
 
 <script>
 import Header from '../../globals/Header';
-import ImageArea from '../../atoms/ImageArea/ImageArea'
-import DescriptionArea from '../../atoms/DescriptionArea/DescriptionArea';
+import { ImageArea, DescriptionArea } from '../../atoms';
 import { DefaultTemplate } from "../../templates";
 
 export default {
@@ -25,4 +27,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.column-image {
+  padding-horizontal: 50;
+}
+</style>
