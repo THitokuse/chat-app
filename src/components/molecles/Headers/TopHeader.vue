@@ -1,16 +1,16 @@
 <template>
   <view class="container">
-    <SearchField></SearchField>
+    <TextField></TextField>
   </view>
 </template>
 
 <script>
-import SearchField from '../SearchField/SearchField'
+import { TextField } from "../../atoms";
 
 export default {
   name: "TopHeader",
   components: {
-    SearchField
+    TextField
   }
 };
 </script>
