@@ -2,7 +2,7 @@
   <view class="container">
     <Header :headerComponent="'TopHeader'"></Header>
     <default-template>
-      <text>Top Face Screen</text>
+      <TopSwipeCard></TopSwipeCard>
     </default-template>
   </view>
 </template>
@@ -10,12 +10,14 @@
 <script>
 import Header from '../../globals/Header';
 import { DefaultTemplate } from "../../templates";
+import TopSwipeCard from "../../molecles/TopSwipeCard/TopSwipeCard"
 
 export default {
   name: "TopFaceScreen",
   components: {
     Header,
-    DefaultTemplate
+    DefaultTemplate,
+    TopSwipeCard
   }
 };
 </script>
