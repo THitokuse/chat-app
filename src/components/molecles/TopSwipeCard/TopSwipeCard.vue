@@ -18,7 +18,7 @@
         :style="{ width: 360, height: 360}"
         resizeMode='contain'>
           <image-background
-            class="tinder"
+            class="avatar"
             :style="{ width: 340, height: 340}"
             :source="{uri:person.src}"
           />
@@ -81,27 +81,29 @@ export default {
   position: relative;
 }
 .card-wrapper {
-  /* background: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  /*
   color: #fff;
   padding: 20px;
-  width: 360px;
-  height: 360px;
-  top: 50px;
-  left: 50px;
-  position: absolute;
   cursor: hand; */
+  top: 30px;
+  left: 30px;
+  position: absolute;
+  /* padding-horizontal: 50; */
+  shadow-color: #000;
+  shadow-opacity: 0.25;
+  shadow-radius: 3.84;
+  elevation: 5;
+  background-color: #fff;
   border-radius: 10px;
 }
 .avatar {
-  /* background: #222;
-  width: 340px;
-  height: 340px;
+  /*
   display: block;
-  margin-top: 10px;
-  margin-left: 10px;
   background-size: auto 160% !important;
   background-position: center;
   background-repeat: no-repeat; */
+  margin-top: 10px;
+  margin-left: 10px;
+  background-color: #222;
 }
 </style>
