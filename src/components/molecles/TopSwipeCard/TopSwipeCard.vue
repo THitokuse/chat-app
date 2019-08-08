@@ -1,8 +1,6 @@
 <template>
   <view>
     <view
-      v-for="person in people"
-      :key="person.id"
       class="tinder"
       @touchstart="start"
       @touchmove="move"
@@ -16,7 +14,9 @@
       <transition-group @leave="leave" @afterLeave="reset">
         <view
           class="card-wrapper"
-          :style="{ width: 360, height: 360}"
+          v-for="(person, index) in people"
+          :key="person.id"
+          :style="isCur(index) ? mainCardStyle() : bentchCardStyle(index)"
           resizeMode='contain'
         >
           <image-background
@@ -44,6 +44,11 @@ export default {
   data() {
     return {
       cardStatus: "normal",
+      size: {
+        top: 0,
+        width: 0,
+        height: 0
+      },
       moveStatus: initStatus(),
       people: [
         {
@@ -72,6 +77,27 @@ export default {
         }
       ]
     }
+  },
+  computed: {
+    nowKey() {
+      if (this.cardStatus === "leave") {
+        return null;
+      }
+      return this.people[0] && this.people[0]["id"];
+    },
+    checkFace() {
+      const difX = this.moveStatus.move.x - this.moveStatus.start.x;
+      const type = difX <= -50 ? "Nope" : difX >= 50 ? "Like" : "None";
+      return type;
+    }
+  },
+  mounted() {
+    this.size = {
+      top: this.$el.offsetTop,
+      width: this.$el.offsetWidth,
+      height: this.$el.offsetHeight
+    };
+    window.onresize = this.getSize;
   },
   methods: {
     start(e) {
@@ -154,10 +180,63 @@ export default {
       el.style.transition = `all ${duration}ms ease`;
       setTimeout(done, duration);
     },
+    isCur(index) {
+      return index === 0 && this.people[index]["id"] === this.nowKey;
+    },
     reset() {
       this.cardStatus = "normal";
       this.moveStatus = initStatus();
-    }
+    },
+    mainCardStyle() {
+      const style = { zIndex: 10 };
+      // if (this.cardStatus === "normal") {
+      //   style["transform"] = "scale(1) translate3d(0,0,0) rotate(0deg)";
+      //   style["transition"] = "none";
+      // } else if (this.cardStatus === "move") {
+      //   const { start, move } = this.moveStatus;
+      //   const x = move.x - start.x || 0;
+      //   const y = move.y - start.y || 0;
+
+      //   const ratio = x / (360 * 0.5);
+      //   this.moveStatus.ratio = ratio;
+      //   // 10度で回転
+      //   const rotate = 10 * ratio;
+      //   style[
+      //     "transform"
+      //   ] = `translate3d(${x}px,${y}px,0) rotate(${rotate}deg) scale(1.05)`;
+      //   style["transition"] = "none";
+      // }
+      return style;
+    },
+    bentchCardStyle(index) {
+      if ((index === 1 && this.cardStatus === "leave") || index > 1) {
+        return {
+          zIndex: -1,
+          opacity: 0
+        };
+      }
+      const style = { zIndex: 9 };
+      // if (this.cardStatus === "normal") {
+      //   style["transform"] = "scale3d(0.95,0.95,1)";
+      //   style["transition"] = "all 500ms ease";
+      // } else if (this.cardStatus === "move") {
+      //   let ratio = this.moveStatus.ratio;
+      //   if (ratio > 1) {
+      //     ratio = 1;
+      //   } else if (ratio < -1) {
+      //     ratio = -1;
+      //   }
+      //   style["transform"] = `scale3d(${Math.abs(ratio) * 0.05 +
+      //     0.95},${Math.abs(ratio) * 0.05 + 0.95},1)`;
+      //   style["transition"] = "none";
+      // } else if (this.cardStatus === "leave") {
+      //   style["transform"] = "scale3d(1,1,1)";
+      //   style["transition"] =
+      //     "all 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275)";
+      // }
+      return style;
+    },
+    submit(type, item) {}
   }
 }
 </script>
